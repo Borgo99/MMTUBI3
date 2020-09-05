@@ -1,0 +1,38 @@
+.footer {
+
+    height: 14vh;
+    width: 100%;
+    //background-color: $color-dark-gray;
+    background-color: rgba(0, 0, 0, .9);
+    transform: translateY(-55vh); 
+    text-align: right;
+    position: relative;
+    outline: solid 2px $color-pers2;
+
+    & > * {
+        color: $color-light-gray;
+        font-size: $small-size;
+    }
+
+    &__madeby {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-5%, -50%);
+    }
+
+    &__privacy {
+        text-transform: uppercase;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(10%, -50%);
+        transition: all .3s;
+
+        &:hover {
+            font-size: calc(#{$small-size * 1.2});
+        }
+    }
+ 
+}

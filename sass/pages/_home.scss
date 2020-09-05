@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(big-desktop) {
+        font-size: 83%;
+    }
+    @include respond(mobile) {
+        font-size: 56.5%;
+    }
+    
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Abel', sans-serif;
+    background-color: $color-light-gray;
+}
+
+p {
+    font-size: $normal-size;
+}
+
+a {
+    text-decoration: none;
+}

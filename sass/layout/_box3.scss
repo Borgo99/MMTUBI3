@@ -1,0 +1,71 @@
+.box3 {
+    background-image: $gradient1;
+    transform: translateY(-55vh);
+
+    &__container {
+        padding: 5vh 8vw;
+        padding-bottom: 1vh;
+
+        & > * {
+            display: inline-block;
+            width: 40%;
+            @include respond(phone-land) {
+                display: block;
+                text-align: center;
+                width: 100%;        
+            }
+        }
+    }
+
+    &__info {
+        float: left;
+        padding-top: 5rem;
+        @include respond(phone) {
+            padding-top: 2rem;
+        }
+    }
+    &--subtitle {
+        @include subtitle;
+        padding-bottom: 2rem;
+    }
+    &--text {
+        padding-bottom: 2rem;
+    }
+
+    &__maps {
+        margin-left: 4rem;
+
+        @include respond(phone-land) {
+            margin: 0 auto;   
+        }
+
+        iframe {
+            width: 55rem;
+            height: 45rem;
+            padding: 6rem;
+            transform: translateX(5vw);
+            outline: solid 3px $color-pers2;
+            outline-offset: -6rem;
+            //box-shadow: 0px 1rem 100px $color-dark-gray;
+
+            @include respond(tab-land) {
+                width: 50rem;
+                margin-left: -8rem;
+            }
+            @include respond(tab-port2) {
+                width: 42rem;
+                margin-left: -5rem;
+                height: 40rem;
+            }
+            @include respond(phone) {
+                margin-top: -3.4rem;
+            }
+            @media only screen and (max-width: 25em) {
+                width: 36rem;
+                height: 34rem;
+                margin-left: -4rem;
+            }
+        }
+    }
+
+}

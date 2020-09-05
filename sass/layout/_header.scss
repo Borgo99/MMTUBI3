@@ -1,0 +1,151 @@
+.header {
+
+    height: 100vh;
+
+    background-image: url("img/img1-min.jpg");
+    background-position: center;
+    background-size: cover;
+
+    transition: all 1s;
+
+    .headbar {
+
+        position: fixed;
+        z-index: 10;
+        height: 8vh;
+        width: 100vw;
+        background-color: transparent;
+
+        transition: all .6s;
+        
+        &--active, &:hover {
+
+            border-bottom: solid 2px $color-light-gray; 
+            background-color: rgba(0, 0, 0, .85);
+
+        }
+
+        &__item {
+
+            text-align: center;
+            height: 100%;
+            position: relative;
+            width: 12%;
+            float: right;
+            
+            p {
+                
+                width: 100%;
+                color: $color-light-gray;
+                text-transform: uppercase;
+                font-size: 2.8rem;
+
+                @include absoluteCentering;
+            }
+
+            &:first-child {
+                margin-right: 3%;
+            }
+
+
+            //hover
+            transition: all .5s;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                background-color: $color-light-gray;
+                z-index: -1;
+                opacity: 0;
+                transition: all .3s;
+            }
+
+            &:hover::after {
+                opacity: 1;
+                transform: translateX(-100%);
+            }
+
+            &:hover {
+                p {
+                    cursor: pointer;
+                    color: #000;
+                }
+            }
+
+            //clicked
+            &:active {
+                transform: scale(.85);
+                letter-spacing: 2px;
+            }
+
+            @include respond(tab-port) {
+                display: none;
+            }
+
+        }
+
+    }
+
+    &__logo {
+
+        @include absoluteCentering;
+
+        width: 30vw;
+
+        @include respond(phone) {
+            width: 45vw;
+        }
+        @media only screen and (max-width: 25em) {
+            width: 50vw;
+        }
+
+        transition: all .8s;
+
+        &--scroll {
+            top: -4.2vh;
+            left: -5vw;
+            transform: scale(.5);
+            position: fixed;
+            z-index: 10;
+            cursor: pointer;
+
+            @include respond(big-desktop) {
+                top: -3.5vh;
+            }
+            @include respond(tab-land) {
+                top: -3vh
+            }
+            @include respond(tab-port2) {
+                top: -1.5vh;
+                left: -4vw;
+                transform: scale(.6); 
+            }
+            @include respond(phone-land) {
+                transform: scale(.7);
+                top: -0.7vh;
+                left: -2vw;
+            }
+            @include respond(phone) {
+                transform: scale(.6);
+                top: -1.5vh;
+                left: -4vw;
+            }
+            @media only screen and (max-width: 31.25em) {
+                transform: scale(.65);
+                top: -0.6vh;
+            }
+            @media only screen and (max-width: 25em) {
+                transform: scale(.78);
+                top: -.2vh;
+                left: -1vw;
+            }
+        }
+
+    }
+
+}

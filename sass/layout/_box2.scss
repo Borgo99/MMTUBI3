@@ -1,0 +1,135 @@
+.box2 {
+
+    transform: translateY(-55vh);
+
+    &--bg {
+        background-image: url("../img/img-box2.jpg");
+        background-position: top;
+        background-size: cover;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &--filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000 , $alpha: .7);
+        z-index: -1;
+
+        transition: all .7s;
+    }
+
+    &__container {
+
+        //margin: 0 auto;
+        padding: 8vh 8vw;
+        padding-bottom: 2rem;
+        z-index: 1;
+
+        transition: all 1s;
+
+    }
+
+    &--text {
+        font-size: $greater-size;
+        color: $color-light-gray;
+        z-index: 1;
+        padding: 2rem;
+        background-color: rgba($color: #000000, $alpha: .5);
+    }
+
+    &__products {
+
+        text-align: center;
+        padding: 5vh 10vw;
+
+        .box-prodotto {
+
+            background-color: $color-pers1;
+            display: inline-block;
+            width: 20rem;
+            text-align: center;
+            border: solid 3px $color-pers2;
+            margin: 1.5rem;
+            //cursor: pointer;
+            transform: rotate(-460deg) scale(1.2);
+
+            @include respond(phone) {
+                width: 16rem;
+                height: 16rem;
+            }
+            @include respond(mobile) {
+                width: 14rem;
+                height: 14rem;
+            }
+
+            &__img {
+                padding: 2rem;
+                height: 20vh;
+
+                @include respond(phone) {
+                    padding: 1.2rem;
+                    height: 16vh;
+                }
+                @include respond(mobile) {
+                    height: 13vh;
+                }
+            }
+
+            &__descrizione {
+                text-transform: uppercase;
+                font-size: $normal-size;
+                padding-bottom: 1rem;
+
+                @include respond(mobile) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            transition: all .2s;
+
+            &:hover {
+
+                transform: scale(1.15) !important;
+
+            }
+
+        }
+
+    }
+
+    &__btn {
+        text-align: center;
+        padding-top: 2vh;
+        padding-bottom: 5rem;
+
+        .button {
+            @include respond(big-desktop) {
+                font-size: 2.5rem !important;
+            }
+        }
+    }
+
+    &--subtitle {
+        @include subtitle;
+        color: $color-light-gray;
+        text-align: center;
+        padding-top: 1rem;
+
+        @include respond(phone) {
+            font-size: 3.6rem;
+        }
+        @include respond(mobile) {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+}

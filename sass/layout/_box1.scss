@@ -1,0 +1,87 @@
+.box1 {
+
+    background-image: $gradient1;
+    padding: 3vh 0;
+
+    transition: all .5s;
+
+    &__container {
+
+        padding: 5vh 8vw;
+        padding-bottom: 1vh;
+        margin: 0 auto;
+        position: relative;
+
+        & > * {
+            width: 40%;
+            text-align: justify;
+
+            @include respond(phone) {
+                width: 90%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        &--column2 {
+            position: absolute;
+            top: 9vh;
+            right: 8vw;
+
+            @include respond(phone) {
+                position: unset;
+                padding-top: 2rem;
+            }
+        }
+
+        &--img {
+
+            margin-top: 10vh;
+            display: block;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            opacity: 0;
+            transition: all 5s;
+
+            @include respond(mobile) {
+                margin-top: 4rem;
+            }
+
+            img {
+                width: 50vw;
+                border: solid 2px #333;
+                border-radius: 5px;
+
+                @include respond(phone-land) {
+                    width: 60vw;      
+                }
+                @include respond(phone) {
+                    width: 70vw;
+                }
+                @include respond(mobile) {
+                    width: 75vw;
+                }
+            }
+        }
+
+    }
+
+    &--text {
+        font-size: $normal-size;
+    }
+
+    &--subtitle {
+        @include subtitle;
+        padding: 1rem 2%;
+
+        @include respond(phone) {
+            padding-bottom: 1.5rem;
+        }
+
+        transform: translateX(-20vw);
+        opacity: 0;
+        transition: all 1s;
+    }
+
+}
