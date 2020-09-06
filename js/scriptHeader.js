@@ -97,7 +97,11 @@
         });
         nav1.addEventListener("click", function() {
             checkbox.checked = false;
-            window.scrollTo({top: header.offsetHeight - window.screen.height*0.5, behavior: 'smooth' });
+            if (window.screen.width < 500) {
+                window.scrollTo({top: header.offsetHeight - window.screen.height*0.65, behavior: 'smooth' });
+            } else {
+                window.scrollTo({top: header.offsetHeight - window.screen.height*0.5, behavior: 'smooth' });
+            }
         });
 
         prodotti.addEventListener("click", function() {
@@ -105,7 +109,11 @@
         });
         nav2.addEventListener("click", function() {
             checkbox.checked = false;
-            window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.42, behavior: 'smooth' });
+            if (window.screen.width < 500) {
+                window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.57, behavior: 'smooth' });
+            } else {
+                window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.42, behavior: 'smooth' });
+            }
         });
 
         contatti.addEventListener("click", function() {
@@ -113,7 +121,11 @@
         });
         nav3.addEventListener("click", function() {
             checkbox.checked = false;
-            window.scrollTo({top: header.offsetHeight + box1.offsetHeight + box2.offsetHeight - window.screen.height*0.5, behavior: 'smooth' });
+            if (window.screen.width < 500) {
+                window.scrollTo({top: header.offsetHeight + box1.offsetHeight + box2.offsetHeight - window.screen.height*0.65, behavior: 'smooth' });
+            } else {
+                window.scrollTo({top: header.offsetHeight + box1.offsetHeight + box2.offsetHeight - window.screen.height*0.5, behavior: 'smooth' });
+            }
         });
 
         logo.addEventListener("click", function() {
