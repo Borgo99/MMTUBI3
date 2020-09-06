@@ -18,11 +18,20 @@
 
         transition: all .6s;
         
-        &--active, &:hover {
-
+        &--active {
+            border-bottom: solid 2px $color-light-gray !important; 
+            background-color: rgba(0, 0, 0, .85) !important;
+        }
+        &:hover {
             border-bottom: solid 2px $color-light-gray; 
             background-color: rgba(0, 0, 0, .85);
+        }
 
+        @include respond(mobile) {
+            &:hover {
+                border-bottom: none;
+                background-color: transparent;
+            }
         }
 
         &__item {

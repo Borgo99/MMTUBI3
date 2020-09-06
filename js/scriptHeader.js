@@ -55,7 +55,7 @@
 
         window.addEventListener("scroll", function() {
             
-            if (window.scrollY > 5) {
+            if (window.pageYOffset > 5) {
                 bar.classList.add("headbar--active");
                 logo.classList.add("header__logo--scroll");
                 box1.style.transform = "translateY(-55vh)";
@@ -71,7 +71,7 @@
                 box1_img.style.opacity = "0";
             }
 
-        });
+        }, false);
 
     }
 

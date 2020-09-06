@@ -53,6 +53,19 @@ body::-webkit-scrollbar-thumb {
   .navigation_checkbox:checked ~ .navigation_nav {
     width: 100vw;
     opacity: 1; }
+  .navigation_checkbox:checked + .navigation_button {
+    z-index: 5000;
+    top: 32vh;
+    right: 39vw; }
+  .navigation_checkbox:checked + .navigation_button .navigation_icon {
+    background-color: transparent; }
+    .navigation_checkbox:checked + .navigation_button .navigation_icon::after, .navigation_checkbox:checked + .navigation_button .navigation_icon::before {
+      background-color: #333;
+      transform-origin: left; }
+    .navigation_checkbox:checked + .navigation_button .navigation_icon::after {
+      transform: rotate(45deg); }
+    .navigation_checkbox:checked + .navigation_button .navigation_icon::before {
+      transform: rotate(-45deg) translate(-4px, 3px); }
   .navigation_nav {
     position: absolute;
     top: 0;
@@ -119,7 +132,8 @@ body::-webkit-scrollbar-thumb {
     .navigation_icon::after, .navigation_icon::before {
       content: "";
       position: absolute;
-      left: 0; }
+      left: 0;
+      transition: all .5s; }
     .navigation_icon::after {
       top: -1rem; }
     .navigation_icon::before {
@@ -127,7 +141,8 @@ body::-webkit-scrollbar-thumb {
   .navigation_button {
     margin-left: auto;
     width: 6rem;
-    height: 8vh; }
+    height: 8vh;
+    transition: all .2s; }
   .navigation_button:hover .navigation_icon::after {
     top: -1.1rem; }
   .navigation_button:hover .navigation_icon::before {
@@ -173,9 +188,16 @@ a {
     width: 100vw;
     background-color: transparent;
     transition: all .6s; }
-    .header .headbar--active, .header .headbar:hover {
+    .header .headbar--active {
+      border-bottom: solid 2px #f2f2f2 !important;
+      background-color: rgba(0, 0, 0, 0.85) !important; }
+    .header .headbar:hover {
       border-bottom: solid 2px #f2f2f2;
       background-color: rgba(0, 0, 0, 0.85); }
+    @media only screen and (max-width: 28.13em) {
+      .header .headbar:hover {
+        border-bottom: none;
+        background-color: transparent; } }
     .header .headbar__item {
       text-align: center;
       height: 100%;

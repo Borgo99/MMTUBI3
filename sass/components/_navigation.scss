@@ -28,6 +28,27 @@
         width: 100vw;
         opacity: 1;
     } 
+    &_checkbox:checked + &_button {
+        z-index: 5000;
+        top: 32vh;
+        right: 39vw;
+    }
+    &_checkbox:checked + &_button &_icon {
+        
+        background-color: transparent;
+
+        &::after,
+        &::before {
+            background-color: $color-dark-gray;
+            transform-origin: left;
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
+        &::before {
+            transform: rotate(-45deg) translate(-4px, 3px);
+        }
+    }
 
     &_nav {
         position: absolute;
@@ -117,6 +138,7 @@
             content: "";
             position: absolute;
             left: 0;
+            transition: all .5s;
         }
         &::after {
             top: -1rem;
@@ -130,6 +152,7 @@
         margin-left: auto;
         width: 6rem;
         height: 8vh;
+        transition: all .2s;
     }
     &_button:hover &_icon {
         &::after {
