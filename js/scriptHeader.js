@@ -86,16 +86,34 @@
         var contatti = document.querySelector("#contatti");
         var logo = document.querySelector("#logo");
 
+        var nav1 = document.querySelector("#nav1");
+        var nav2 = document.querySelector("#nav2");
+        var nav3 = document.querySelector("#nav3");
+        var nav = document.querySelector("#nav");
+        var checkbox = document.querySelector("#navi-btn");
+
         chisiamo.addEventListener("click", function() {
+            window.scrollTo({top: header.offsetHeight - window.screen.height*0.5, behavior: 'smooth' });
+        });
+        nav1.addEventListener("click", function() {
+            checkbox.checked = false;
             window.scrollTo({top: header.offsetHeight - window.screen.height*0.5, behavior: 'smooth' });
         });
 
         prodotti.addEventListener("click", function() {
             window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.42, behavior: 'smooth' });
         });
+        nav2.addEventListener("click", function() {
+            checkbox.checked = false;
+            window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.42, behavior: 'smooth' });
+        });
 
         contatti.addEventListener("click", function() {
             window.scrollTo({top: header.offsetHeight + box1.offsetHeight + box2.offsetHeight - window.screen.height*0.5, behavior: "smooth" });
+        });
+        nav3.addEventListener("click", function() {
+            checkbox.checked = false;
+            window.scrollTo({top: header.offsetHeight + box1.offsetHeight + box2.offsetHeight - window.screen.height*0.5, behavior: 'smooth' });
         });
 
         logo.addEventListener("click", function() {

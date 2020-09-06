@@ -27,7 +27,7 @@
     &_checkbox:checked ~ &_nav {
         width: 100vw;
         opacity: 1;
-    }
+    } 
 
     &_nav {
         position: absolute;
@@ -44,6 +44,10 @@
         @include absoluteCentering;
         width: 30vw;
         list-style: none;
+
+        @include respond(mobile) {
+            width: 50vh;
+        }
     }
     &_item {
         width: 100%;
@@ -63,6 +67,10 @@
             z-index: -1;
             opacity: 0;
             transition: all .3s;
+
+            @include respond(mobile) {
+                transition: all .1s;
+            }
         }
 
         &:hover::after {
@@ -81,6 +89,10 @@
         text-transform: uppercase;
         font-size: $greater-size;
         color: $color-dark-gray;
+
+        @include respond(mobile) {
+            font-size: 3.2rem;
+        }
     }
 
     &_icon {
