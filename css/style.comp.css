@@ -228,7 +228,14 @@ a {
       transform: scale(0.5);
       position: fixed;
       z-index: 10;
-      cursor: pointer; }
+      cursor: pointer;
+      /*
+            @media only screen and (max-width: 25em) {  //400px
+                transform: scale(.9);
+                top: 1vh;
+                left: 0vw;
+            }
+            */ }
       @media only screen and (min-width: 106.2em) {
         .header__logo--scroll {
           top: -3.5vh; } }
@@ -254,7 +261,7 @@ a {
         .header__logo--scroll {
           transform: scale(0.65);
           top: -0.6vh; } }
-      @media only screen and (max-width: 25em) {
+      @media only screen and (max-width: 28.13em) {
         .header__logo--scroll {
           transform: scale(0.9);
           top: 1vh;
