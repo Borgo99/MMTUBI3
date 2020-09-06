@@ -50,6 +50,10 @@
         text-align: center;
         padding: 5vh 10vw;
 
+        @include respond(mobile) {
+            padding-top: 2vh;
+        }
+
         .box-prodotto {
 
             background-color: $color-pers1;
@@ -79,7 +83,7 @@
                     height: 16vh;
                 }
                 @include respond(mobile) {
-                    height: 13vh;
+                    height: 10vh;
                 }
             }
 

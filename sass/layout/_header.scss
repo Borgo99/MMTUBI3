@@ -101,7 +101,7 @@
             width: 45vw;
         }
         @media only screen and (max-width: 25em) {
-            width: 50vw;
+            width: 55vw;
         }
 
         transition: all .8s;
@@ -135,14 +135,14 @@
                 top: -1.5vh;
                 left: -4vw;
             }
-            @media only screen and (max-width: 31.25em) {
+            @media only screen and (max-width: 31.25em) { //500px
                 transform: scale(.65);
                 top: -0.6vh;
             }
-            @media only screen and (max-width: 25em) {
-                transform: scale(.78);
-                top: -.2vh;
-                left: -1vw;
+            @media only screen and (max-width: 25em) {  //400px
+                transform: scale(.9);
+                top: 1vh;
+                left: 0vw;
             }
         }
 

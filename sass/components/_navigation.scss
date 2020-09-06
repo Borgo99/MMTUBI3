@@ -16,6 +16,10 @@
         position: absolute;
         top: 1.5rem;
         right: 1.5rem;
+
+        @include respond(mobile) {
+            top: 3rem;        
+        }
     }
     &_checkbox {
         display: none;
@@ -91,6 +95,11 @@
             height: 3px;
             background-color: $color-light-gray;
             display: inline-block;
+
+            @include respond(mobile) {
+                width: 4rem;
+                height: 4px;
+            }
         }
         &::after, &::before {
             content: "";

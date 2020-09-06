@@ -12,6 +12,10 @@
         margin: 0 auto;
         position: relative;
 
+        @include respond(mobile) {
+            padding-top: 1vh;
+        }
+
         & > * {
             width: 40%;
             text-align: justify;

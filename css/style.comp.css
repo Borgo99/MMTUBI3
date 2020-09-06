@@ -45,6 +45,9 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem; }
+    @media only screen and (max-width: 28.13em) {
+      .navigation_checkbox, .navigation_button {
+        top: 3rem; } }
   .navigation_checkbox {
     display: none; }
   .navigation_checkbox:checked ~ .navigation_nav {
@@ -100,6 +103,10 @@ body::-webkit-scrollbar-thumb {
       height: 3px;
       background-color: #f2f2f2;
       display: inline-block; }
+      @media only screen and (max-width: 28.13em) {
+        .navigation_icon, .navigation_icon::after, .navigation_icon::before {
+          width: 4rem;
+          height: 4px; } }
     .navigation_icon::after, .navigation_icon::before {
       content: "";
       position: absolute;
@@ -214,7 +221,7 @@ a {
         width: 45vw; } }
     @media only screen and (max-width: 25em) {
       .header__logo {
-        width: 50vw; } }
+        width: 55vw; } }
     .header__logo--scroll {
       top: -4.2vh;
       left: -5vw;
@@ -249,9 +256,9 @@ a {
           top: -0.6vh; } }
       @media only screen and (max-width: 25em) {
         .header__logo--scroll {
-          transform: scale(0.78);
-          top: -.2vh;
-          left: -1vw; } }
+          transform: scale(0.9);
+          top: 1vh;
+          left: 0vw; } }
 
 .box1 {
   background-image: linear-gradient(to right bottom, #8e9eab, #eef2f3 15%, #eef2f3 85%, #8e9eab);
@@ -262,6 +269,9 @@ a {
     padding-bottom: 1vh;
     margin: 0 auto;
     position: relative; }
+    @media only screen and (max-width: 28.13em) {
+      .box1__container {
+        padding-top: 1vh; } }
     .box1__container > * {
       width: 40%;
       text-align: justify; }
@@ -352,6 +362,9 @@ a {
   .box2__products {
     text-align: center;
     padding: 5vh 10vw; }
+    @media only screen and (max-width: 28.13em) {
+      .box2__products {
+        padding-top: 2vh; } }
     .box2__products .box-prodotto {
       background-color: #C0D9ED;
       display: inline-block;
@@ -378,7 +391,7 @@ a {
             height: 16vh; } }
         @media only screen and (max-width: 28.13em) {
           .box2__products .box-prodotto__img {
-            height: 13vh; } }
+            height: 10vh; } }
       .box2__products .box-prodotto__descrizione {
         text-transform: uppercase;
         font-size: 2rem;
