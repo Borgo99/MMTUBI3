@@ -25,6 +25,9 @@
                 margin: 0 auto;
                 display: block;
             }
+            @include respond(mobile) {
+                width: 100%;
+            }
         }
 
         &--column2 {
@@ -69,6 +72,9 @@
 
     &--text {
         font-size: $normal-size;
+        @include respond(mobile) {
+            font-size: 2.2rem;
+        }
     }
 
     &--subtitle {
