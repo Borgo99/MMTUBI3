@@ -44,6 +44,7 @@
         var box1 = document.querySelector(".box1");
         var box1_img = document.querySelector(".box1__container--img");
         var box1_subtitle = document.querySelector(".box1--subtitle");
+        var nav_btn = document.querySelector(".navigation_checkbox");
 
         if (window.top > 5) {
             bar.classList.add("headbar--active");
@@ -52,6 +53,14 @@
             bar.classList.remove("headbar--active");
             logo.classList.remove("header__logo--scroll");
         }
+
+        nav_btn.addEventListener("change", function(){
+            if (nav_btn.checked) {
+                logo.style.zIndex = "-1";
+            } else {
+                logo.style.zIndex = "10";
+            }
+        });
 
         window.addEventListener("scroll", function() {
             
@@ -97,6 +106,7 @@
         });
         nav1.addEventListener("click", function() {
             checkbox.checked = false;
+            logo.style.zIndex = "10";
             if (window.screen.width < 500) {
                 window.scrollTo({top: header.offsetHeight - window.screen.height*0.65, behavior: 'smooth' });
             } else {
@@ -109,6 +119,7 @@
         });
         nav2.addEventListener("click", function() {
             checkbox.checked = false;
+            logo.style.zIndex = "10";
             if (window.screen.width < 500) {
                 window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.57, behavior: 'smooth' });
             } else {
@@ -121,6 +132,7 @@
         });
         nav3.addEventListener("click", function() {
             checkbox.checked = false;
+            logo.style.zIndex = "10";
             if (window.screen.width < 500) {
                 window.scrollTo({top: header.offsetHeight + box1.offsetHeight + box2.offsetHeight - window.screen.height*0.65, behavior: 'smooth' });
             } else {

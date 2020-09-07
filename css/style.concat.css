@@ -456,6 +456,9 @@ a {
     @media only screen and (max-width: 39.4em) {
       .box3__info {
         padding-top: 1rem; } }
+    @media only screen and (max-width: 28.13em) {
+      .box3__info {
+        float: none; } }
   .box3--subtitle {
     font-size: 4.4rem;
     font-family: "Lato", sans-serif;
@@ -473,6 +476,9 @@ a {
     @media only screen and (max-width: 48.2em) {
       .box3__maps {
         margin: 0 auto; } }
+    @media only screen and (max-width: 28.13em) {
+      .box3__maps {
+        height: 32rem; } }
     .box3__maps iframe {
       width: 45vw;
       height: 45rem;
@@ -487,9 +493,10 @@ a {
           height: 60vw; } }
       @media only screen and (max-width: 28.13em) {
         .box3__maps iframe {
-          transform: translate(-2rem, -2rem);
-          width: 75vw;
-          height: 70vw; } }
+          transform: translate(-6.2rem, -2rem);
+          float: left;
+          width: 87vw;
+          height: 35rem; } }
 
 .footer {
   height: 9.7rem;

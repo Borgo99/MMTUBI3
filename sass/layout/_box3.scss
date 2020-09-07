@@ -23,6 +23,9 @@
         @include respond(phone) {
             padding-top: 1rem;
         }
+        @include respond(mobile) {
+            float: none;
+        }
     }
     &--subtitle {
         @include subtitle;
@@ -42,6 +45,9 @@
         @include respond(phone-land) {
             margin: 0 auto;   
         }
+        @include respond(mobile) {
+            height: 32rem;
+        }
 
         iframe {
             width: 45vw;
@@ -58,9 +64,10 @@
                 height: 60vw;
             }
             @include respond(mobile) {
-                transform: translate(-2rem, -2rem);    
-                width: 75vw;
-                height: 70vw;
+                transform: translate(-6.2rem, -2rem);    
+                float: left;
+                width: 87vw;
+                height: 35rem;
             }
 
         }
