@@ -29,6 +29,7 @@
         padding-bottom: 2rem;
     }
     &--text {
+        font-size: $normal-size;
         padding-bottom: 2rem;
         @include respond(mobile) {
             font-size: 2.2rem;
