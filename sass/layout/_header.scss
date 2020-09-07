@@ -12,7 +12,7 @@
 
         position: fixed;
         z-index: 10;
-        height: 8vh;
+        height: 5.6rem;
         width: 100vw;
         background-color: transparent;
 
@@ -27,7 +27,7 @@
             background-color: rgba(0, 0, 0, .85);
         }
 
-        @include respond(mobile) {
+        @include respond(tab-port) {
             &:hover {
                 border-bottom: none;
                 background-color: transparent;
@@ -104,62 +104,24 @@
 
         @include absoluteCentering;
 
-        width: 30vw;
+        height: 9.2rem;
 
-        @include respond(phone) {
-            width: 45vw;
-        }
-        @media only screen and (max-width: 25em) {
-            width: 55vw;
+        @include respond(mobile) {
+            height: 8rem;        
         }
 
         transition: all .8s;
 
         &--scroll {
-            top: -4.2vh;
-            left: -5vw;
-            transform: scale(.5);
+            top: .4rem;
+            left: 2rem;
+            width: auto;
+            height: 5rem;
+            transform: none;
+
             position: fixed;
             z-index: 10;
             cursor: pointer;
-
-            @include respond(big-desktop) {
-                top: -3.5vh;
-            }
-            @include respond(tab-land) {
-                top: -3vh
-            }
-            @include respond(tab-port2) {
-                top: -1.5vh;
-                left: -4vw;
-                transform: scale(.6); 
-            }
-            @include respond(phone-land) {
-                transform: scale(.7);
-                top: -0.7vh;
-                left: -2vw;
-            }
-            @include respond(phone) {
-                transform: scale(.6);
-                top: -1.5vh;
-                left: -4vw;
-            }
-            @media only screen and (max-width: 31.25em) { //500px
-                transform: scale(.65);
-                top: -0.6vh;
-            } 
-            @include respond(mobile) {
-                transform: scale(.9);
-                top: 1vh;
-                left: 0vw;
-            }
-            /*
-            @media only screen and (max-width: 25em) {  //400px
-                transform: scale(.9);
-                top: 1vh;
-                left: 0vw;
-            }
-            */
         }
 
     }

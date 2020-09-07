@@ -28,12 +28,15 @@
 
     &__container {
 
-        //margin: 0 auto;
-        padding: 8vh 8vw;
+        padding: 5.5rem 9.4rem;
         padding-bottom: 2rem;
         z-index: 1;
 
         transition: all 1s;
+
+        @include respond(mobile) {
+            padding: 5.5rem 7rem;        
+        }
 
     }
 
@@ -48,17 +51,14 @@
     &__products {
 
         text-align: center;
-        padding: 5vh 10vw;
-
-        @include respond(mobile) {
-            padding-top: 2vh;
-        }
+        padding: 3.4rem 11.7rem;
 
         .box-prodotto {
 
             background-color: $color-pers1;
             display: inline-block;
             width: 20rem;
+            height: 20rem;
             text-align: center;
             border: solid 3px $color-pers2;
             margin: 1.5rem;
@@ -69,21 +69,14 @@
                 width: 16rem;
                 height: 16rem;
             }
-            @include respond(mobile) {
-                width: 14rem;
-                height: 14rem;
-            }
 
             &__img {
                 padding: 2rem;
-                height: 20vh;
+                height: 12rem;
 
                 @include respond(phone) {
                     padding: 1.2rem;
-                    height: 16vh;
-                }
-                @include respond(mobile) {
-                    height: 10vh;
+                    height: 9.5rem;
                 }
             }
 
@@ -91,10 +84,6 @@
                 text-transform: uppercase;
                 font-size: $normal-size;
                 padding-bottom: 1rem;
-
-                @include respond(mobile) {
-                    font-size: 1.6rem;
-                }
             }
 
             transition: all .2s;
@@ -111,14 +100,8 @@
 
     &__btn {
         text-align: center;
-        padding-top: 2vh;
+        padding-top: 1.3rem;
         padding-bottom: 5rem;
-
-        .button {
-            @include respond(big-desktop) {
-                font-size: 2.5rem !important;
-            }
-        }
     }
 
     &--subtitle {
@@ -127,9 +110,6 @@
         text-align: center;
         padding-top: 1rem;
 
-        @include respond(phone) {
-            font-size: 3.6rem;
-        }
         @include respond(mobile) {
             width: 80%;
             margin: 0 auto;

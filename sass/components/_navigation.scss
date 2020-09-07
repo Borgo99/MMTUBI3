@@ -14,12 +14,8 @@
 
     &_checkbox, &_button {
         position: absolute;
-        top: 1.5rem;
+        top: 2rem;
         right: 1.5rem;
-
-        @include respond(mobile) {
-            top: 3rem;        
-        }
     }
     &_checkbox {
         display: none;
@@ -27,12 +23,28 @@
     &_checkbox:checked ~ &_nav {
         width: 100vw;
         opacity: 1;
-    } 
+    }
+    &_checkbox:checked ~ &_nav &_list {
+        &:first-child {
+            width: 30vw;
+            
+            @include respond(mobile) {
+                width: 50vh;
+            }
+        }
+    }
+    &_checkbox:checked ~ &_nav &_item {
+        width: 100%;
+        padding: 1rem;
+    }
     &_checkbox:checked + &_button {
         z-index: 5000;
-        top: 32vh;
-        right: 39vw;
+        text-align: center;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -20vh); 
     }
+    
     &_checkbox:checked + &_button &_icon {
         
         background-color: transparent;
@@ -40,13 +52,14 @@
         &::after,
         &::before {
             background-color: $color-dark-gray;
-            transform-origin: left;
+            //transform-origin: left;
+            top: 0;
         }
         &::after {
             transform: rotate(45deg);
         }
         &::before {
-            transform: rotate(-45deg) translate(-4px, 3px);
+            transform: rotate(-45deg);
         }
     }
 
@@ -63,17 +76,12 @@
     }
     &_list {
         @include absoluteCentering;
-        width: 30vw;
         list-style: none;
-
-        @include respond(mobile) {
-            width: 50vh;
-        }
+        width: 0;
     }
     &_item {
-        width: 100%;
+        width: 0;
         text-align: center;
-        padding: 1rem;
         position: relative;
 
         &::after {
@@ -111,6 +119,9 @@
         font-size: $greater-size;
         color: $color-dark-gray;
 
+        @include respond(tab-port2) {
+            font-size: 3rem;
+        }
         @include respond(mobile) {
             font-size: 3.2rem;
         }
@@ -133,6 +144,9 @@
                 width: 4rem;
                 height: 4px;
             }
+            @include respond(small-phone) {
+                height: 3px;
+            }
         }
         &::after, &::before {
             content: "";
@@ -145,13 +159,15 @@
         }
         &::before {
             top: 1rem;
+            @include respond(small-phone) {
+                top: .8rem;
+            }
         }
     }
 
     &_button {
         margin-left: auto;
-        width: 6rem;
-        height: 8vh;
+        margin-right: 2rem;
         transition: all .2s;
     }
     &_button:hover &_icon {

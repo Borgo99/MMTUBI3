@@ -1,19 +1,19 @@
 .box1 {
 
     background-image: $gradient1;
-    padding: 3vh 0;
+    padding: 2.5rem 0;
 
     transition: all .5s;
 
     &__container {
 
-        padding: 5vh 8vw;
-        padding-bottom: 1vh;
+        padding: 3.46rem 9.4rem;
+        padding-bottom: .7rem;
         margin: 0 auto;
         position: relative;
 
         @include respond(mobile) {
-            padding-top: 1vh;
+            padding: 1rem 7rem;        
         }
 
         & > * {
@@ -29,8 +29,8 @@
 
         &--column2 {
             position: absolute;
-            top: 9vh;
-            right: 8vw;
+            top: 6.2rem;
+            right: 9.4rem;
 
             @include respond(phone) {
                 position: unset;
@@ -40,17 +40,13 @@
 
         &--img {
 
-            margin-top: 10vh;
+            margin-top: 6.9rem;
             display: block;
             width: 100%;
             position: relative;
             text-align: center;
             opacity: 0;
             transition: all 5s;
-
-            @include respond(mobile) {
-                margin-top: 4rem;
-            }
 
             img {
                 width: 50vw;
@@ -64,7 +60,7 @@
                     width: 70vw;
                 }
                 @include respond(mobile) {
-                    width: 75vw;
+                    width: 65vw;        
                 }
             }
         }

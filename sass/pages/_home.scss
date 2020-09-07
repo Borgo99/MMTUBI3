@@ -12,8 +12,14 @@ html {
     @include respond(big-desktop) {
         font-size: 83%;
     }
+    @include respond(tab-port2) {
+        font-size: 55%;
+    }
     @include respond(mobile) {
-        font-size: 56.5%;
+        font-size: 50%;
+    }
+    @include respond(small-phone) {
+        font-size: 42%;
     }
     
 }
