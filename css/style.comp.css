@@ -494,7 +494,6 @@ a {
       @media only screen and (max-width: 28.13em) {
         .box3__maps iframe {
           transform: translate(-6.2rem, -2rem);
-          float: left;
           width: 87vw;
           height: 35rem; } }
 
