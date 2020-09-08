@@ -495,7 +495,8 @@ a {
         .box3__maps iframe {
           transform: translate(-6.2rem, -2rem);
           width: 87vw;
-          height: 35rem; } }
+          height: 35rem;
+          overflow-x: hidden; } }
 
 .footer {
   height: 9.7rem;
