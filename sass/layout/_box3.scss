@@ -47,6 +47,7 @@
         }
         @include respond(mobile) {
             height: 32rem;
+            overflow: hidden;
         }
 
         iframe {
@@ -68,7 +69,6 @@
                 //float: left;
                 width: 87vw;
                 height: 35rem;
-                overflow-x: hidden;
             }
 
         }

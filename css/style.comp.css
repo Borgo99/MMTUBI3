@@ -478,7 +478,8 @@ a {
         margin: 0 auto; } }
     @media only screen and (max-width: 28.13em) {
       .box3__maps {
-        height: 32rem; } }
+        height: 32rem;
+        overflow: hidden; } }
     .box3__maps iframe {
       width: 45vw;
       height: 45rem;
@@ -495,8 +496,7 @@ a {
         .box3__maps iframe {
           transform: translate(-6.2rem, -2rem);
           width: 87vw;
-          height: 35rem;
-          overflow-x: hidden; } }
+          height: 35rem; } }
 
 .footer {
   height: 9.7rem;
