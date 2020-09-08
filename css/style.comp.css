@@ -195,7 +195,7 @@ a {
 
 .header {
   height: 100vh;
-  background-image: url("img/img1-min.jpg");
+  background-image: url("../img/img1-min.jpg");
   background-position: center;
   background-size: cover;
   transition: all 1s; }
