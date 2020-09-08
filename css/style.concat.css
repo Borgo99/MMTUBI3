@@ -64,6 +64,8 @@ body::-webkit-scrollbar-thumb {
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -20vh); }
+  .navigation_checkbox:checked ~ .navigation_nav .navigation_link {
+    display: unset; }
   .navigation_checkbox:checked + .navigation_button .navigation_icon {
     background-color: transparent; }
     .navigation_checkbox:checked + .navigation_button .navigation_icon::after, .navigation_checkbox:checked + .navigation_button .navigation_icon::before {
@@ -114,6 +116,7 @@ body::-webkit-scrollbar-thumb {
     .navigation_item:hover a {
       color: #f2f2f2; }
   .navigation_link {
+    display: none;
     text-transform: uppercase;
     font-size: 2.4rem;
     color: #333; }

@@ -44,6 +44,9 @@
         left: 50vw;
         transform: translate(-50%, -20vh); 
     }
+    &_checkbox:checked ~ &_nav &_link {
+        display: unset;
+    }
     
     &_checkbox:checked + &_button &_icon {
         
@@ -115,6 +118,7 @@
 
     }
     &_link {
+        display: none;
         text-transform: uppercase;
         font-size: $greater-size;
         color: $color-dark-gray;
