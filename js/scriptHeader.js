@@ -42,6 +42,7 @@
         //inizializzo
         var bar = document.querySelector(".headbar");
         var logo = document.querySelector(".header__logo");
+        var logo_bar = document.querySelector(".header__logo-bar");
         var box1 = document.querySelector(".box1");
         var box1_img = document.querySelector(".box1__container--img");
         var box1_subtitle = document.querySelector(".box1--subtitle");
@@ -57,9 +58,9 @@
 
         nav_btn.addEventListener("change", function(){
             if (nav_btn.checked) {
-                logo.style.zIndex = "-1";
+                logo_bar.style.zIndex = "-1";
             } else {
-                logo.style.zIndex = "10";
+                logo_bar.style.zIndex = "10";
             }
         });
 
@@ -70,6 +71,7 @@
                 logo.classList.add("header__logo--scroll");
                 box1.style.transform = "translateY(-55vh)";
                 box1_img.style.opacity = "1";
+                logo_bar.style.left = "2rem";
 
                 box1_subtitle.style.opacity = "1";
                 box1_subtitle.style.transform = "none";
@@ -77,6 +79,7 @@
             } else {
                 bar.classList.remove("headbar--active");
                 logo.classList.remove("header__logo--scroll");
+                logo_bar.style.left = "-20rem";
                 box1.style.transform = "none";
                 box1_img.style.opacity = "0";
             }

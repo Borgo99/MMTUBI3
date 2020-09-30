@@ -273,18 +273,23 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     height: 9.2rem;
-    transition: all .8s; }
+    transition: all .8s;
+    backface-visibility: hidden; }
     @media only screen and (max-width: 28.13em) {
       .header__logo {
         height: 8rem; } }
     .header__logo--scroll {
+      opacity: 0;
+      visibility: hidden; }
+    .header__logo-bar {
+      transition: all .3s;
+      z-index: 10;
       top: .4rem;
-      left: 2rem;
+      left: -20rem;
       width: auto;
       height: 5rem;
       transform: none;
       position: fixed;
-      z-index: 10;
       cursor: pointer; }
 
 .box1 {

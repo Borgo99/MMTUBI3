@@ -65,7 +65,6 @@
                 margin-right: 3%;
             }
 
-
             //hover
             transition: all .5s;
 
@@ -109,6 +108,10 @@
 
     }
 
+
+    &__container {
+    }
+
     &__logo {
 
         @include absoluteCentering;
@@ -120,16 +123,33 @@
         }
 
         transition: all .8s;
+        //z-index: 10;
+        backface-visibility: hidden;
 
         &--scroll {
+            opacity: 0;
+            visibility: hidden;
+            //top: .4rem;
+            //left: 2rem;
+            //width: auto;
+            //height: 5rem;
+            //transform: none;
+
+            //position: fixed;
+            //cursor: pointer;
+        }
+
+        &-bar {
+            transition: all .3s;
+            z-index: 10;
             top: .4rem;
-            left: 2rem;
+            //left: 2rem;
+            left: -20rem;
             width: auto;
             height: 5rem;
             transform: none;
 
             position: fixed;
-            z-index: 10;
             cursor: pointer;
         }
 
