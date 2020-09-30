@@ -13,6 +13,10 @@
         height: 100%;
         width: 100%;
         background-image: linear-gradient(to bottom, rgba(0,0,0,.7) 2%, transparent);
+
+        @include respond(tab-port) {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,.45) 10%, transparent);
+        }
     }
 
     .headbar {
