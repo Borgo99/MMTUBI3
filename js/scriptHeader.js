@@ -25,11 +25,12 @@
         
         var changeBg = function() {
             var i = counter.get();
-            el.style.backgroundImage = 'url("img/img' + i + '-min.jpg")';
+            //el.style.backgroundImage = 'url("img/img' + i + '-min.jpg")';
+            el.style.backgroundImage = 'url("img/slide' + i + '.jpg")';
             counter.increase();
         }
         
-        for(var i=0; i<4; i++) {
+        for(var i=0; i<n; i++) {
             changeBg();
         }
         setInterval(changeBg, 5000);
@@ -147,7 +148,7 @@
     }
 
     var controller = (function(){
-        bgChanger(4);
+        bgChanger(2);
         headbarController();
         headbarBtnController();
     })();

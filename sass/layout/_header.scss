@@ -2,11 +2,18 @@
 
     height: 100vh;
 
-    background-image: url("../img/img1-min.jpg");
+    //background-image: url("../img/img1-min.jpg");
+    background-image: url("../img/slide1.jpg");
     background-position: center;
     background-size: cover;
 
     transition: all 1s;
+
+    &__filter {
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,.7) 2%, transparent);
+    }
 
     .headbar {
 
@@ -14,7 +21,7 @@
         top: 0;
         left: 0;
         z-index: 10;
-        height: 5.6rem;
+        height: 5.6rem; 
         width: 100vw;
         background-color: transparent;
 
@@ -22,11 +29,11 @@
         
         &--active {
             border-bottom: solid 2px $color-light-gray !important; 
-            background-color: rgba(0, 0, 0, .85) !important;
+            background-color: rgba(0, 0, 0, .7) !important;
         }
         &:hover {
             border-bottom: solid 2px $color-light-gray; 
-            background-color: rgba(0, 0, 0, .85);
+            background-color: rgba(0, 0, 0, .7);
         }
 
         @include respond(tab-port) {
