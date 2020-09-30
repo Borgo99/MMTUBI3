@@ -1,5 +1,26 @@
 (function(){
 
+    var bar = document.querySelector(".headbar");
+    var logo = document.querySelector(".header__logo");
+    var logo_bar = document.querySelector(".header__logo-bar");
+    var box1 = document.querySelector(".box1");
+    var box1_img = document.querySelector(".box1__container--img");
+    var box1_subtitle = document.querySelector(".box1--subtitle");
+    //var nav_btn = document.querySelector(".navigation_checkbox");
+
+    var header = document.querySelector(".header");
+    var box2 = document.querySelector("#box2"); 
+    
+    var chisiamo = document.querySelector("#chi-siamo");
+    var prodotti = document.querySelector("#prodotti");
+    var contatti = document.querySelector("#contatti");
+
+    var nav1 = document.querySelector("#nav1");
+    var nav2 = document.querySelector("#nav2");
+    var nav3 = document.querySelector("#nav3");
+    var nav = document.querySelector("#nav");
+    var checkbox = document.querySelector("#navi-btn");
+
     var bgChanger = function(n) {
 
         var el = document.querySelector(".header");
@@ -39,15 +60,6 @@
 
     var headbarController = function() {
 
-        //inizializzo
-        var bar = document.querySelector(".headbar");
-        var logo = document.querySelector(".header__logo");
-        var logo_bar = document.querySelector(".header__logo-bar");
-        var box1 = document.querySelector(".box1");
-        var box1_img = document.querySelector(".box1__container--img");
-        var box1_subtitle = document.querySelector(".box1--subtitle");
-        var nav_btn = document.querySelector(".navigation_checkbox");
-
         if (window.top > 5) {
             bar.classList.add("headbar--active");
             logo.classList.add("header__logo--scroll");
@@ -56,7 +68,7 @@
             logo.classList.remove("header__logo--scroll");
         }
 
-        nav_btn.addEventListener("change", function(){
+        checkbox.addEventListener("change", function(){
             if (nav_btn.checked) {
                 logo_bar.style.zIndex = "-1";
             } else {
@@ -89,21 +101,6 @@
     }
 
     var headbarBtnController = function() {
-
-        var header = document.querySelector(".header");
-        var box1 = document.querySelector(".box1");    
-        var box2 = document.querySelector("#box2"); 
-        
-        var chisiamo = document.querySelector("#chi-siamo");
-        var prodotti = document.querySelector("#prodotti");
-        var contatti = document.querySelector("#contatti");
-        var logo = document.querySelector("#logo");
-
-        var nav1 = document.querySelector("#nav1");
-        var nav2 = document.querySelector("#nav2");
-        var nav3 = document.querySelector("#nav3");
-        var nav = document.querySelector("#nav");
-        var checkbox = document.querySelector("#navi-btn");
 
         chisiamo.addEventListener("click", function() {
             window.scrollTo({top: header.offsetHeight - window.screen.height*0.5, behavior: 'smooth' });
@@ -151,7 +148,7 @@
     }
 
     var controller = (function(){
-        bgChanger(2);
+        bgChanger(3);
         headbarController();
         headbarBtnController();
     })();

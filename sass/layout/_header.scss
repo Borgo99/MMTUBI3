@@ -4,7 +4,7 @@
 
     //background-image: url("../img/img1-min.jpg");
     background-image: url("../img/slide1.jpg");
-    background-position: center;
+    background-position: top;
     background-size: cover;
 
     transition: all 1s;
@@ -28,13 +28,14 @@
         transition: all .6s;
         
         &--active {
-            border-bottom: solid 2px $color-light-gray !important; 
-            background-color: rgba(0, 0, 0, .7) !important;
+            border-bottom: solid 1px $color-pal4 !important; 
+            background-color: rgba($color-pal4, .8) !important;
         }
         &:hover {
-            border-bottom: solid 2px $color-light-gray; 
-            background-color: rgba(0, 0, 0, .7);
-        }
+            //border-bottom: solid 2px $color-light-gray; 
+            border-bottom: solid 1px $color-pal4; 
+            background-color: rgba($color-pal4, .8);
+        } 
 
         @include respond(tab-port) {
             &:hover {

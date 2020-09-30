@@ -32,7 +32,7 @@
 
         &--column2 {
             position: absolute;
-            top: 6.2rem;
+            top: 10.6rem;
             right: 9.4rem;
 
             @include respond(phone) {
@@ -53,7 +53,7 @@
 
             img {
                 width: 50vw;
-                border: solid 2px #333;
+                //border: solid 2px #333;
                 border-radius: 5px;
 
                 @include respond(phone-land) {

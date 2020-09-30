@@ -1,10 +1,18 @@
+//palette
+$color-pal1: #f6f6f6;
+$color-pal2: #d6e4f0;
+$color-pal3: #1E56A0;
+$color-pal4: #163172;
+$color-pal4: #132b64;
+
+
 //COLORS
 $color-light-gray: #f2f2f2;
 $color-dark-gray: #333;
 $color-pers1: #C0D9ED;
 $color-pers2: #0f4c75;
-$gradient1: linear-gradient(to right bottom, #8e9eab , #eef2f3 15%, #eef2f3 85%, #8e9eab );
-
+//$gradient1: linear-gradient(to right bottom, #8e9eab , #eef2f3 15%, #eef2f3 85%, #8e9eab );
+$gradient1: linear-gradient(to right bottom, $color-pal2 , $color-pal1 35%, $color-pal1 65%, $color-pal2);
 
 //FONT
 $font-lato: 'Lato', sans-serif;

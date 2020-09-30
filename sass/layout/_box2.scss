@@ -4,7 +4,7 @@
 
     &--bg {
         //background-image: url("../img/img-box2.jpg");
-        background-image: url("../img/slide1.jpg");
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/slide3.jpg");
         background-position: top;
         background-size: cover;
         position: fixed;
@@ -21,7 +21,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($color: #000 , $alpha: .7);
+        background-color: rgba(#000 , $alpha: .4);
         z-index: -1;
 
         transition: all .7s;
@@ -36,17 +36,18 @@
         transition: all 1s;
 
         @include respond(mobile) {
-            padding: 5.5rem 7rem;        
+            padding: 5.5rem 3rem;        
         }
 
     }
 
     &--text {
         font-size: $greater-size;
-        color: $color-light-gray;
+        //color: $color-light-gray;
+        color: $color-pal1;
         z-index: 1;
         padding: 2rem;
-        background-color: rgba($color: #000000, $alpha: .5);
+        background-color: rgba($color: $color-pal4, $alpha: .9);
 
         @include respond(mobile) {
             font-size: 2.2rem;
@@ -64,12 +65,12 @@
 
         .box-prodotto {
 
-            background-color: $color-pers1;
+            background-color: $color-pal2;
             display: inline-block;
             width: 20rem;
             height: 20rem;
             text-align: center;
-            border: solid 3px $color-pers2;
+            //border: solid 2px $color-pal3;
             margin: 1.5rem;
             //cursor: pointer;
             transform: rotate(-460deg) scale(1.2);
@@ -93,6 +94,8 @@
                 text-transform: uppercase;
                 font-size: $normal-size;
                 padding-bottom: 1rem;
+                color: $color-pal3;
+                font-weight: bolder;
             }
 
             transition: all .2s;
@@ -111,13 +114,18 @@
         text-align: center;
         padding-top: 1.3rem;
         padding-bottom: 5rem;
+
+        & > * {
+            background-color: $color-pal3 !important;
+        }
     }
 
     &--subtitle {
         @include subtitle;
         color: $color-light-gray;
         text-align: center;
-        padding-top: 1rem;
+        padding-top: 1rem;    
+        text-shadow: 1px 2px 4px black;
 
         @include respond(mobile) {
             width: 80%;

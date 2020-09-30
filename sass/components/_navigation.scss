@@ -71,7 +71,8 @@
         top: 0;
         left: 0;
         height: 100vh;
-        background-image: radial-gradient(#f2f2f2 65%, #0f4c75 );
+        //background-image: radial-gradient(#f2f2f2 65%, #0f4c75 );
+        background-image: radial-gradient($color-pal1, $color-pal2 75%, $color-pal2 );
 
         opacity: 0;
         width: 0;

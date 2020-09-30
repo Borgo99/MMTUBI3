@@ -2,12 +2,12 @@
 
     height: 9.7rem;
     width: 100%;
-    //background-color: $color-dark-gray;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: $color-pal4;
+    //background-color: rgba(0, 0, 0, .9);
     transform: translateY(-55vh); 
     text-align: right;
     position: relative;
-    outline: solid 2px $color-pers2;
+    //outline: solid 2px $color-pers2;
 
     & > * {
         color: $color-light-gray;
