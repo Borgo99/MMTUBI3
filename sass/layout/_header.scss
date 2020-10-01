@@ -59,7 +59,7 @@
             p {
                 
                 width: 100%;
-                color: $color-light-gray;
+                color: $color-pal1;
                 text-transform: uppercase;
                 font-size: 2.8rem;
 
@@ -81,7 +81,7 @@
                 position: absolute;
                 top: 0;
                 left: 100%;
-                background-color: $color-light-gray;
+                background-color: $color-pal2;
                 z-index: -1;
                 opacity: 0;
                 transition: all .3s;
@@ -95,7 +95,7 @@
             &:hover {
                 p {
                     cursor: pointer;
-                    color: #000;
+                    color: $color-pal4;
                 }
             }
 

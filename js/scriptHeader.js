@@ -141,7 +141,7 @@
             }
         });
 
-        logo.addEventListener("click", function() {
+        logo_bar.addEventListener("click", function() {
             window.scrollTo({top: 0, behavior: 'smooth'});
         })
 
