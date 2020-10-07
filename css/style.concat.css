@@ -294,6 +294,23 @@ a {
       transform: none;
       position: fixed;
       cursor: pointer; }
+  .header__certificates {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    padding-left: 2rem;
+    width: 100%; }
+    @media only screen and (max-width: 61.25em) {
+      .header__certificates #certificate1 {
+        float: right;
+        transform: translate(1rem, 3rem); } }
+    .header__certificates img {
+      display: inline-block; }
+    .header__certificates #certificate1 {
+      width: 15rem; }
+    .header__certificates #certificate2 {
+      width: 8rem;
+      margin: 0 auto; }
 
 .box1 {
   background-image: linear-gradient(to right bottom, #d6e4f0, #f6f6f6 35%, #f6f6f6 65%, #d6e4f0);

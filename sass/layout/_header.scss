@@ -160,4 +160,30 @@
 
     }
 
+    &__certificates {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        padding-left: 2rem;
+        width: 100%;
+        
+        @include respond(tab-port) {
+            #certificate1 {
+                float: right;
+                transform: translate(1rem, 3rem);
+            }
+        }
+        
+        img {
+            display: inline-block;
+        }
+        #certificate1 {
+            width: 15rem;
+        }
+        #certificate2 {
+            width: 8rem;
+            margin: 0 auto;
+        }
+    }
+
 }
