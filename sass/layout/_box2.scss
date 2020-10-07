@@ -1,6 +1,6 @@
 .box2 {
 
-    transform: translateY(-55vh);
+    transform: translateY($heightTranslated);
 
     &--bg {
         //background-image: url("../img/img-box2.jpg");

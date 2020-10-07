@@ -1,10 +1,15 @@
 .box3 {
     background-image: $gradient1;
-    transform: translateY(-55vh);
+    transform: translateY($heightTranslated);
 
     &__container {
         padding: 3.4rem 9.4rem; 
         padding-bottom: .7rem;
+
+        @include respond(phone-land) {
+            padding-left: 0;
+            padding-right: 0;
+        }
 
         & > * {
             display: inline-block;
@@ -60,6 +65,13 @@
             //box-shadow: 0px 1rem 100px $color-dark-gray;
 
             @include respond(phone-land) {
+                transform: none;
+                width: 100vw;
+                padding: 0;
+                padding-top: 2rem;
+            }
+            /*
+            @include respond(phone-land) {
                 transform: translateY(-2rem);
                 width: 65vw;
                 height: 60vw;
@@ -70,6 +82,7 @@
                 width: 87vw;
                 height: 35rem;
             }
+            */
 
         }
     }

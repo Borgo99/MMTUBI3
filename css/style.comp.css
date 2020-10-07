@@ -433,7 +433,7 @@ a {
         padding-bottom: 1.5rem; } }
 
 .box2 {
-  transform: translateY(-55vh); }
+  transform: translateY(-65vh); }
   .box2--bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/slide3.jpg");
     background-position: top;
@@ -526,10 +526,14 @@ a {
 
 .box3 {
   background-image: linear-gradient(to right bottom, #d6e4f0, #f6f6f6 35%, #f6f6f6 65%, #d6e4f0);
-  transform: translateY(-55vh); }
+  transform: translateY(-65vh); }
   .box3__container {
     padding: 3.4rem 9.4rem;
     padding-bottom: .7rem; }
+    @media only screen and (max-width: 48.2em) {
+      .box3__container {
+        padding-left: 0;
+        padding-right: 0; } }
     .box3__container > * {
       display: inline-block;
       width: 40%; }
@@ -573,23 +577,32 @@ a {
       height: 45rem;
       padding: 6rem;
       transform: translateX(3.2rem);
-      outline-offset: -6rem; }
+      outline-offset: -6rem;
+      /*
+            @include respond(phone-land) {
+                transform: translateY(-2rem);
+                width: 65vw;
+                height: 60vw;
+            }
+            @include respond(mobile) {
+                transform: translate(-6.2rem, -2rem);    
+                //float: left;
+                width: 87vw;
+                height: 35rem;
+            }
+            */ }
       @media only screen and (max-width: 48.2em) {
         .box3__maps iframe {
-          transform: translateY(-2rem);
-          width: 65vw;
-          height: 60vw; } }
-      @media only screen and (max-width: 28.13em) {
-        .box3__maps iframe {
-          transform: translate(-6.2rem, -2rem);
-          width: 87vw;
-          height: 35rem; } }
+          transform: none;
+          width: 100vw;
+          padding: 0;
+          padding-top: 2rem; } }
 
 .footer {
   height: 9.7rem;
   width: 100%;
   background-color: #132b64;
-  transform: translateY(-55vh);
+  transform: translateY(-65vh);
   text-align: right;
   position: relative; }
   @media only screen and (max-width: 61.25em) {

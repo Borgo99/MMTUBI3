@@ -1,5 +1,7 @@
 (function(){
 
+    var heightTranslation = "65vh"; 
+
     var bar = document.querySelector(".headbar");
     var logo = document.querySelector(".header__logo");
     var logo_bar = document.querySelector(".header__logo-bar");
@@ -83,7 +85,7 @@
             if (window.pageYOffset > 5) {
                 bar.classList.add("headbar--active");
                 logo.classList.add("header__logo--scroll");
-                box1.style.transform = "translateY(-55vh)";
+                box1.style.transform = "translateY(-" + heightTranslation + ")";
                 box1_img.style.opacity = "1";
                 logo_bar.style.left = "2rem";
 

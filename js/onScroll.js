@@ -30,7 +30,7 @@
         //effetto per i prodotti
         if (oneTimeCondition && window.scrollY > (box_products.offsetHeight - window.screen.height * 0.3) ) {
             oneTimeCondition = false;
-            console.log("It's working");
+            //console.log("It's working");
             for(var i=0; i<box_products.children.length; i++) {
                 box_products.children[i].style.transform = "none";
             }
