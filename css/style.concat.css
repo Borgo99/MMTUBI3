@@ -609,10 +609,15 @@ a {
       font-size: calc(1.68rem); }
     @media only screen and (max-width: 61.25em) {
       .footer__privacy {
-        position: unset;
-        float: right;
+        right: 1.5rem;
         transform: none;
-        padding: 3.8rem 1.5rem 3.8rem 0; } }
+        top: 3.8rem;
+        /*
+            position: unset;
+            float: right;
+            transform: none;
+            padding: 3.8rem 1.5rem 3.8rem 0;
+            */ } }
   .footer__certificates {
     max-height: 9rem;
     position: absolute;

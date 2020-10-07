@@ -48,10 +48,17 @@
         }
 
         @include respond(tab-port) {
+
+            right: 1.5rem;
+            transform: none;
+            top: 3.8rem;
+
+            /*
             position: unset;
             float: right;
             transform: none;
             padding: 3.8rem 1.5rem 3.8rem 0;
+            */
         }
     }
 
