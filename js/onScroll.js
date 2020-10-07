@@ -17,7 +17,7 @@
     window.addEventListener("scroll", function() {
 
         //box2 position
-        if (window.scrollY > 620) {
+        if (window.scrollY > 500) {
             //box2.classList.add("box2--scrolled");
             box2_filter.style.opacity = "1";
             box2_container.style.opacity = "1";

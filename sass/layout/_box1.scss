@@ -2,6 +2,7 @@
 
     background-image: $gradient1;
     padding: 2.5rem 0;
+    min-height: calc(#{$heightTranslated}*-1);
 
     transition: all .5s;
 
@@ -96,7 +97,7 @@
                 top: 32%;
                 left: 35%;
                 z-index: 1;
-                @include respond(phone-land) {
+                @include respond(mobile) {
                     display: none;     
                 }
             }
@@ -104,7 +105,7 @@
                 width: 27vw;
                 top: 20%;
                 left: 75%;
-                @include respond(phone-land) {
+                @include respond(mobile) {
                     display: none;
                 }
             }

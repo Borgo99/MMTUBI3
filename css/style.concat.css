@@ -330,6 +330,7 @@ a {
 .box1 {
   background-image: linear-gradient(to right bottom, #d6e4f0, #f6f6f6 35%, #f6f6f6 65%, #d6e4f0);
   padding: 2.5rem 0;
+  min-height: calc(-65vh*-1);
   transition: all .5s; }
   .box1__container {
     padding: 3.46rem 9.4rem;
@@ -404,14 +405,14 @@ a {
         top: 32%;
         left: 35%;
         z-index: 1; }
-        @media only screen and (max-width: 48.2em) {
+        @media only screen and (max-width: 28.13em) {
           .box1__container--img #img2 {
             display: none; } }
       .box1__container--img #img3 {
         width: 27vw;
         top: 20%;
         left: 75%; }
-        @media only screen and (max-width: 48.2em) {
+        @media only screen and (max-width: 28.13em) {
           .box1__container--img #img3 {
             display: none; } }
   .box1--text {

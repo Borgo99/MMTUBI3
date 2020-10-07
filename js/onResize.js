@@ -18,10 +18,11 @@
     html.style.maxHeight = bodyHeight.toString() + "px";
 
     window.addEventListener("resize", function() {
-        bodyHeight = header.offsetHeight + box1.offsetHeight + box2.offsetHeight + box3.offsetHeight + footer.offsetHeight - window.innerHeight*heightTranslated;
-        body.style.maxHeight = bodyHeight.toString() + "px";
-        html.style.maxHeight = bodyHeight.toString() + "px";
-        footer.style.backgroundColor = "red";
+        if (window.screen.width > 500) {
+            bodyHeight = header.offsetHeight + box1.offsetHeight + box2.offsetHeight + box3.offsetHeight + footer.offsetHeight - window.innerHeight*heightTranslated;
+            body.style.maxHeight = bodyHeight.toString() + "px";
+            html.style.maxHeight = bodyHeight.toString() + "px";
+        }
     })
 
 })();
