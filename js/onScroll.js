@@ -4,6 +4,7 @@
     var box2 = document.querySelector("#box2");
     var box2_container = document.querySelector(".box2__container");
     var box2_filter = document.querySelector(".box2--filter");
+    var box2_bg = document.querySelector(".box2--bg");
     var box1 = document.querySelector(".box1");
 
     var box_products = document.querySelector(".box2__products");
@@ -25,6 +26,12 @@
             //box2.classList.remove("box2--scrolled");
             box2_filter.style.opacity = "0";
             box2_container.style.opacity = "0";
+        }
+        
+        if (window.scrollY < 100 || window.scrollY > header.offsetHeight+box1.offsetHeight+box2.offsetHeight) {
+            box2_bg.style.opacity = 0;
+        } else {
+            box2_bg.style.opacity = 1;
         }
 
         //effetto per i prodotti
