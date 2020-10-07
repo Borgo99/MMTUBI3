@@ -19,7 +19,7 @@
 
     window.addEventListener("resize", function() {
         bodyHeight = header.offsetHeight + box1.offsetHeight + box2.offsetHeight + box3.offsetHeight + footer.offsetHeight - window.innerHeight*heightTranslated;
-        if (window.screen.height>500 || bodyHeight>body.offsetHeight) {
+        if (window.screen.height>500 || bodyHeight<body.offsetHeight) {
             body.style.maxHeight = bodyHeight.toString() + "px";
             html.style.maxHeight = bodyHeight.toString() + "px";
         }
