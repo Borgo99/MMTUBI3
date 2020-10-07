@@ -21,6 +21,8 @@
     var nav = document.querySelector("#nav");
     var checkbox = document.querySelector("#navi-btn");
 
+    var header_scroll_icon = document.querySelector("#header-scroll-icon");
+
     var bgChanger = function(n) {
 
         var el = document.querySelector(".header");
@@ -146,6 +148,10 @@
         })
 
     }
+
+    header_scroll_icon.addEventListener("click", function() {
+        window.scrollTo(0, 10);
+    });
 
     var controller = (function(){
         bgChanger(3);

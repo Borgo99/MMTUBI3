@@ -186,4 +186,19 @@
         }
     }
 
+    &__scroll-icon {
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $color-pal1;
+        font-size: 5rem !important;
+
+        animation: up-and-down 1.2s infinite forwards;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
 }

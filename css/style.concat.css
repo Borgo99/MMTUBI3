@@ -1,3 +1,8 @@
+@keyframes up-and-down {
+  100% {
+    transform: translateY(3.5rem) translateX(-50%) scale(0.9);
+    opacity: .1; } }
+
 .button {
   display: inline-block;
   text-align: center;
@@ -311,6 +316,16 @@ a {
     .header__certificates #certificate2 {
       height: 10rem;
       margin: 0 auto; }
+  .header__scroll-icon {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f6f6f6;
+    font-size: 5rem !important;
+    animation: up-and-down 1.2s infinite forwards; }
+    .header__scroll-icon:hover {
+      cursor: pointer; }
 
 .box1 {
   background-image: linear-gradient(to right bottom, #d6e4f0, #f6f6f6 35%, #f6f6f6 65%, #d6e4f0);
