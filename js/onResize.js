@@ -21,6 +21,7 @@
         bodyHeight = header.offsetHeight + box1.offsetHeight + box2.offsetHeight + box3.offsetHeight + footer.offsetHeight - window.innerHeight*heightTranslated;
         body.style.maxHeight = bodyHeight.toString() + "px";
         html.style.maxHeight = bodyHeight.toString() + "px";
+        footer.style.backgroundColor = "red";
     })
 
 })();
