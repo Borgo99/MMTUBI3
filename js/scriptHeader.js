@@ -107,7 +107,7 @@
     var headbarBtnController = function() {
 
         chisiamo.addEventListener("click", function() {
-            window.scrollTo({top: header.offsetHeight - window.screen.height*0.5, behavior: 'smooth' });
+            window.scrollTo({top: header.offsetHeight - window.screen.height*0.54, behavior: 'smooth' });
         });
         nav1.addEventListener("click", function() {
             checkbox.checked = false;
@@ -115,20 +115,20 @@
             if (window.screen.width < 500) {
                 window.scrollTo({top: header.offsetHeight - window.screen.height*0.65, behavior: 'smooth' });
             } else {
-                window.scrollTo({top: header.offsetHeight - window.screen.height*0.5, behavior: 'smooth' });
+                window.scrollTo({top: header.offsetHeight - window.screen.height*0.55, behavior: 'smooth' });
             }
         });
 
         prodotti.addEventListener("click", function() {
-            window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.42, behavior: 'smooth' });
+            window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.55, behavior: 'smooth' });
         });
         nav2.addEventListener("click", function() {
             checkbox.checked = false;
             logo.style.zIndex = "10";
             if (window.screen.width < 500) {
-                window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.57, behavior: 'smooth' });
+                window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.65, behavior: 'smooth' });
             } else {
-                window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.42, behavior: 'smooth' });
+                window.scrollTo({top: header.offsetHeight + box1.offsetHeight - window.screen.height*0.48, behavior: 'smooth' });
             }
         });
 
