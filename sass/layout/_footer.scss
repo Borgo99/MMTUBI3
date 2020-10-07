@@ -7,7 +7,10 @@
     transform: translateY(-55vh); 
     text-align: right;
     position: relative;
-    //outline: solid 2px $color-pers2;
+    
+    @include respond(tab-port) {
+        height: 18.5rem;
+    }
 
     & > * {
         color: $color-light-gray;
@@ -19,6 +22,16 @@
         top: 50%;
         right: 0;
         transform: translate(-5%, -50%);
+
+        @include respond(tab-port) {
+            position: unset;
+            top: 0; 
+            left: 0;
+            display: block;
+            padding: 3.8rem 0 3.8rem 1.5rem;
+            transform: unset;
+            text-align: left;
+        }
     }
 
     &__privacy {
@@ -32,6 +45,31 @@
 
         &:hover {
             font-size: calc(#{$small-size * 1.2});
+        }
+
+        @include respond(tab-port) {
+            position: unset;
+            float: right;
+            transform: none;
+            padding: 3.8rem 1.5rem 3.8rem 0;
+        }
+    }
+
+    &__certificates {
+        max-height: 9rem;
+        @include absoluteCentering;
+
+        img {
+            display: inline-block;
+            height: 7rem;
+        }
+
+        @include respond(tab-port) {
+            display: block;
+            position: unset;
+            transform: none;
+            margin: 0 auto;
+            text-align: center;
         }
     }
  

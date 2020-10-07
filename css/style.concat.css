@@ -303,13 +303,13 @@ a {
     @media only screen and (max-width: 61.25em) {
       .header__certificates #certificate1 {
         float: right;
-        transform: translate(1rem, 3rem); } }
+        transform: translateX(-1rem); } }
     .header__certificates img {
       display: inline-block; }
     .header__certificates #certificate1 {
-      width: 15rem; }
+      height: 10rem; }
     .header__certificates #certificate2 {
-      width: 8rem;
+      height: 10rem;
       margin: 0 auto; }
 
 .box1 {
@@ -577,6 +577,9 @@ a {
   transform: translateY(-55vh);
   text-align: right;
   position: relative; }
+  @media only screen and (max-width: 61.25em) {
+    .footer {
+      height: 18.5rem; } }
   .footer > * {
     color: #f2f2f2;
     font-size: 1.4rem; }
@@ -585,6 +588,15 @@ a {
     top: 50%;
     right: 0;
     transform: translate(-5%, -50%); }
+    @media only screen and (max-width: 61.25em) {
+      .footer__madeby {
+        position: unset;
+        top: 0;
+        left: 0;
+        display: block;
+        padding: 3.8rem 0 3.8rem 1.5rem;
+        transform: unset;
+        text-align: left; } }
   .footer__privacy {
     text-transform: uppercase;
     cursor: pointer;
@@ -595,3 +607,25 @@ a {
     transition: all .3s; }
     .footer__privacy:hover {
       font-size: calc(1.68rem); }
+    @media only screen and (max-width: 61.25em) {
+      .footer__privacy {
+        position: unset;
+        float: right;
+        transform: none;
+        padding: 3.8rem 1.5rem 3.8rem 0; } }
+  .footer__certificates {
+    max-height: 9rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .footer__certificates img {
+      display: inline-block;
+      height: 7rem; }
+    @media only screen and (max-width: 61.25em) {
+      .footer__certificates {
+        display: block;
+        position: unset;
+        transform: none;
+        margin: 0 auto;
+        text-align: center; } }
