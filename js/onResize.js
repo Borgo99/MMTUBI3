@@ -17,13 +17,11 @@
     body.style.maxHeight = bodyHeight.toString() + "px";
     html.style.maxHeight = bodyHeight.toString() + "px";
 
-    var onetime_condition = true;
     window.addEventListener("resize", function() {
-        if (window.screen.width > 500 || onetime_condition) {
-            bodyHeight = header.offsetHeight + box1.offsetHeight + box2.offsetHeight + box3.offsetHeight + footer.offsetHeight - window.innerHeight*heightTranslated;
+        bodyHeight = header.offsetHeight + box1.offsetHeight + box2.offsetHeight + box3.offsetHeight + footer.offsetHeight - window.innerHeight*heightTranslated;
+        if (window.screen.height>500 || bodyHeight>body.offsetHeight) {
             body.style.maxHeight = bodyHeight.toString() + "px";
             html.style.maxHeight = bodyHeight.toString() + "px";
-            onetime_condition = false;
         }
     })
 
