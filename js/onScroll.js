@@ -28,7 +28,7 @@
             box2_container.style.opacity = "0";
         }
         
-        if (window.scrollY < 100 || window.scrollY > box1.offsetHeight+box2.offsetHeight) {
+        if (window.scrollY < 100 || window.scrollY > box1.offsetHeight+box2.offsetHeight+100) {
             box2_bg.style.opacity = 0;
         } else {
             box2_bg.style.opacity = 1;
